@@ -1,0 +1,102 @@
+@use '../utils/variables' as v;
+@use '../utils/functions' as f;
+@use '../utils/mixins' as m;
+
+/* footer */
+
+.footer {
+    background-color: v.$color-primary-300;
+    padding-top: f.rem(200);
+    padding-bottom: f.rem(90);
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        line-height: 2.5;
+        
+        a {
+            color: v.$color-white;
+            
+            &:hover {
+                font-weight: v.$font-weight-bold;
+            }
+        }
+        
+        &__about {
+
+            li.icon-location {
+                list-style-image: url('/images/icon-location.svg');
+                padding-left: 1.5rem;
+            }
+        }
+        
+        &__contact  {
+            
+            li.icon-phone {
+                list-style-image: url('/images/icon-phone.svg');
+                padding-left: 1.5rem;
+            }
+
+            li.icon-email {
+                list-style-image: url('/images/icon-email.svg');
+                padding-left: 1.5rem;
+            }
+        }
+
+        &__links-1, &__links-2 {
+            ul {
+                list-style: none;
+            }
+        }
+        
+        &__social {
+            text-align: center;
+
+            li {
+                display: inline-block;
+                
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+            }
+
+            .social-icon {
+
+                &:hover {
+                    color: v.$color-accent-100;
+                }
+            }
+        }
+    }
+}
+
+@include m.bp-up(lg) {
+
+    .footer-grid {
+        row-gap: f.rem(35);
+        grid-template-columns: 3fr 2fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "logo logo logo logo logo"
+            "about contact links-1 links-2 social";
+
+        &__logo {
+            grid-area: logo;
+        }   
+        &__about {
+            grid-area: about;
+            padding-right: f.rem(80);
+        }
+        &__contact  {
+            grid-area: contact;
+        }
+        &__links-1 {
+            grid-area: links-1;
+        }
+        &__links-2 {
+            grid-area: links-2;
+        }
+        &__social {
+            grid-area: social;
+        }
+    }
+}

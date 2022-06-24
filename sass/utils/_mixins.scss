@@ -1,0 +1,15 @@
+@use 'variables' as v;
+
+// media queries for breakpoints
+
+@mixin bp-up($device) {
+    @media (min-width: map-get(v.$breakpoints-up, $device)) {
+        @content;
+    }
+}
+
+@mixin bp-down($device) {
+    @media (max-width: map-get(v.$breakpoints-up, $device)) {
+        @content;
+    }
+}

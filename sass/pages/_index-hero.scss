@@ -1,0 +1,50 @@
+@use '../utils/variables' as v;
+@use '../utils/functions' as f;
+@use '../utils/mixins' as m;
+
+/* hero */
+
+.hero {
+    background-color: v.$color-primary-100;
+    background-image: url('/images/bg-curvy-mobile.svg');
+    background-repeat: repeat-x;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: f.rem(155);
+    
+    &__img {
+        width: 100%;
+        max-width: f.rem(716);
+    }
+    
+    &__title {
+        font-size: f.rem(24);
+        max-width: f.rem(678);
+        margin-top: f.rem(40);
+        margin-bottom: f.rem(30);
+    }
+    
+    &__copy {
+        max-width: f.rem(585);
+    }
+
+    &__btn {
+        margin-top: f.rem(36);
+    }
+    
+    @include m.bp-up(lg) {
+        background-image: url('/images/bg-curvy-desktop.svg');
+    
+        &__title {
+            font-size: f.rem(40);
+            margin: 3.25rem 0;
+        }
+    
+        &__copy {
+            font-size: f.rem(20);
+        }
+    }
+}

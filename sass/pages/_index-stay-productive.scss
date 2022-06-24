@@ -1,0 +1,53 @@
+@use '../utils/variables' as v;
+@use '../utils/functions' as f;
+@use '../utils/mixins' as m;
+
+/* stay-productive */
+
+.stay-productive {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin-top: f.rem(135);
+    margin-bottom: f.rem(150);
+
+    &__img {
+        img {
+            width: 100%;
+        }
+    }
+    
+    &__title {
+        font-size: f.rem(16);
+    }
+
+    .explore-link {
+        background-image: url('/images/icon-arrow.svg');
+        background-repeat: no-repeat;
+        background-position: right center;
+        color: v.$color-accent-100;
+        padding-right: f.rem(20);
+        border-bottom: 2px solid;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+            background-image: url('/images/icon-arrow-hover.svg');
+            color: v.$color-white;
+            border-color: v.$color-white;
+        }
+    }
+    
+    @include m.bp-up(lg) {
+        grid-template-columns: repeat(2, 1fr);
+        font-size: f.rem(16);
+        
+        &__copy {
+            padding-left: f.rem(50);
+        }
+        
+        &__title {
+            font-size: f.rem(40);
+            max-width: 75%;
+        }
+    }
+}

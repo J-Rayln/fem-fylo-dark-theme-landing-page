@@ -1,0 +1,66 @@
+@use '../utils/variables' as v;
+@use '../utils/functions' as f;
+@use '../utils/mixins' as m;
+
+/* email cta */
+
+.signup {
+    background-color: v.$color-primary-100;
+    max-width: f.rem(860);
+    margin: 0 auto;
+    margin-bottom: f.rem(75);
+    padding: f.rem(35) f.rem(28);
+    text-align: center;
+    border-radius: .5rem;
+    box-shadow: 5px 9px 10px hsla(216, 53%, 9%, .3);
+    transform: translateY(55%);
+    
+    &__title {
+        font-size: f.rem(18);
+        margin-bottom: f.rem(28);
+    }
+
+    &__copy {
+        margin-bottom: f.rem(35);
+    }
+    
+    &__email-form {
+        display: inline-block;
+        width: 100%;
+    }
+
+    input {
+        margin-bottom: f.rem(25);
+    }
+    
+    button {
+        width: 100%;
+    }
+    
+    @include m.bp-up(lg) {
+        padding: f.rem(50) f.rem(75) f.rem(40) f.rem(75);
+        transform: translateY(75%);
+
+        &__title {
+            font-size: f.rem(28);
+            margin-bottom: f.rem(30);
+        }
+    
+        &__copy {
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: f.rem(40);
+        }
+        
+        input {
+            max-width: f.rem(460);
+            margin-bottom: 0;
+        }
+
+        button {
+            width: f.rem(220);
+            margin-left: f.rem(25);
+            font-size: f.rem(14);
+        }
+    }
+}

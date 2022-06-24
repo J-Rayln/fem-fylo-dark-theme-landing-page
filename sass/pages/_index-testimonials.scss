@@ -1,0 +1,46 @@
+@use '../utils/variables' as v;
+@use '../utils/functions' as f;
+@use '../utils/mixins' as m;
+
+/* testimonials */
+
+.testimonials {
+
+    &__grid {
+        background-image: url('/images/bg-quotes.png');
+        background-repeat: no-repeat;
+        background-position: top left 20px;
+        display: grid;
+        gap: f.rem(45);
+        padding-top: f.rem(35);
+
+        @include m.bp-up(lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__card {
+        background-color: v.$color-primary-400;
+        font-size: v.$font-size-body;
+        padding: f.rem(30) f.rem(25) f.rem(25) f.rem(25);
+        border-radius: f.rem(10);
+        box-shadow: 5px 9px 10px hsla(216, 53%, 9%, .3);
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+
+        &--icon {
+            max-height: f.rem(30);
+            border-radius: 50%;
+            padding-right: f.rem(8);
+        }
+
+        &--title {
+            display: block;
+            font-size: f.rem(9);
+            color: hsl(219, 13%, 60%);
+        }
+    }
+}

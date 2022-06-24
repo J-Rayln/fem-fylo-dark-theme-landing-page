@@ -1,0 +1,67 @@
+@use '../utils/variables' as v;
+@use '../utils/functions' as f;
+@use '../utils/mixins' as m;
+
+/* header */
+
+.header {
+    background-color: v.$color-primary-100;
+    padding: f.rem(25) f.rem(20) f.rem(50) f.rem(20);
+    
+    &__grid {
+        display: grid;
+        grid-template-columns: minmax(f.rem(100), 1fr) auto;
+        align-items: center;
+    }
+    
+    &__logo {
+        width: f.rem(83);
+    }
+}
+
+@include m.bp-up(lg) {
+    .header {
+        padding: f.rem(73) f.rem(80);
+        
+        &__logo {
+            width: f.rem(185);
+        }
+    }
+}
+
+/* header navigation */
+
+.nav {
+
+    &-list {
+        list-style-type: none;
+    }
+
+    &-item {
+        display: inline-block;
+
+        &:not(:first-child) {
+            margin-left: f.rem(20);
+        }
+    }
+    
+    &-link {
+        color: v.$color-white;
+        font-size: f.rem(14);
+        
+        &:hover {
+            font-weight: v.$font-weight-bold;
+            text-decoration: underline;
+        }
+    }
+}
+
+@include m.bp-up(lg) {
+    .nav-item:not(:first-child) {
+        margin-left: f.rem(55);
+    }
+    
+    .nav-link {
+        font-size: f.rem(16);
+    }
+}

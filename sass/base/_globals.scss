@@ -1,0 +1,34 @@
+@use '../utils/variables' as v;
+@use '../utils/functions' as f;
+@use '../utils/mixins' as m;
+
+html {
+    font-size: 100%;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: v.$color-primary-200;
+    font-family: inspect(v.$font-family-body);
+    font-size: v.$font-size-body;
+    font-weight: v.$font-weight-normal;
+    color: v.$color-white;
+    line-height: 1.5;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, .nav {
+    font-family: v.$font-family-head;
+    margin: 0;
+}
+
+ul, li {
+    margin: 0;
+}

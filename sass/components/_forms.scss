@@ -1,0 +1,29 @@
+@use '../utils/variables' as v;
+@use '../utils/functions' as f;
+@use '../utils/mixins' as m;
+
+/* form elements */
+
+input, button {
+    font-family: v.$font-family-head;
+    height: f.rem(56);
+    border-radius: 2rem;
+    padding: 0 f.rem(40);
+}
+
+
+button {
+    background: linear-gradient(to right, v.$color-accent-100, v.$color-accent-200);
+    color: v.$color-white;
+    font-weight: v.$font-weight-bold;
+    font-size: f.rem(18);
+    border: none;
+    border-radius: 2rem;
+    width: f.rem(284);
+    transition: filter 200ms ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(125%);
+    }
+}

@@ -1,0 +1,17 @@
+
+// Global styles 
+@forward 'base/globals';
+@forward 'base/helpers';
+
+// Components
+@forward 'components/forms';
+@forward 'components/icons';
+
+// Pages & Page Sections
+@forward 'pages/header';
+@forward 'pages/index-hero';
+@forward 'pages/index-features';
+@forward 'pages/index-stay-productive';
+@forward 'pages/index-testimonials';
+@forward 'pages/index-signup';
+@forward 'pages/footer';

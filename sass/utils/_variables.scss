@@ -1,0 +1,61 @@
+@use 'functions' as f;
+
+// Variables
+// 
+// All variables used throughout the site should be stored in this file.
+
+
+// Colors
+
+// Primary
+$color-primary-100: hsl(217, 28%, 15%); // (intro and email sign up background)
+$color-primary-200: hsl(218, 28%, 13%); // (main background)
+$color-primary-300: hsl(216, 53%, 9%); // (footer background)
+$color-primary-400: hsl(219, 30%, 18%); // (testimonials background)
+
+// Accent
+$color-accent-100: hsl(176, 68%, 64%); // (inside call-to-action gradient)
+$color-accent-200: hsl(198, 60%, 50%); // (inside call-to-action gradient)
+$color-accent-300: hsl(0, 100%, 63%); // (error)
+
+// Neutral
+$color-white: hsl(0, 0%, 100%);
+$color-black: hsl(0, 0%, 0%);
+
+
+// Typography
+
+// Font Stacks
+$font-family-body: 'Open Sans', sans-serif;
+$font-family-head: 'Raleway', sans-serif;
+
+// Fontt Sizes
+$font-size-body: f.rem(14);
+
+// Font Weights
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+
+// Device Breakpoints & Max Widths
+
+$max-width-desktop: f.rem(1290);
+$max-width-tablet: f.rem(750);
+$max-width-phone: f.rem(325);
+
+$breakpoints-up: (
+    "sm": f.rem(499),
+    "md": f.rem(699),
+    "lg": f.rem(1000),
+    "xl": f.rem(1399)
+);
+
+$breakpoints-down: (
+    "sm": f.rem(374.98),
+    "md": f.rem(599.98),
+    "lg": f.rem(999.98)
+);
+
+// SVG Data URLs
+
+$icon-arrow: "%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Ccircle id='b' cx='6' cy='6' r='6'/%3E%3Cfilter x='-25%' y='-25%' width='150%' height='150%' filterUnits='objectBoundingBox' id='a'%3E%3CfeOffset in='SourceAlpha' result='shadowOffsetOuter1'/%3E%3CfeGaussianBlur stdDeviation='1' in='shadowOffsetOuter1' result='shadowBlurOuter1'/%3E%3CfeColorMatrix values='0 0 0 0 0.384313725 0 0 0 0 0.878431373 0 0 0 0 0.850980392 0 0 0 0.811141304 0' in='shadowBlurOuter1'/%3E%3C/filter%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg transform='translate(2 2)'%3E%3Cuse fill='#000' filter='url(#a)' xlink:href='#b'/%3E%3Cuse fill='#62E0D9' xlink:href='#b'/%3E%3C/g%3E%3Cpath d='M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z' fill='#1B2330'/%3E%3C/g%3E%3C/svg%3E";
