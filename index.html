@@ -17,7 +17,7 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/6ad0bd92b5.js" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -183,9 +183,10 @@
                 questions, our support team would be happy to help you.
             </p>
 
-            <form>
-                <input type="email" name="signup__email" id="signup__email" placeholder="email@example.com" class="signup__email-form">
+            <form id="email-signup">
+                <input type="text" name="signup__email" id="signup__email" placeholder="email@example.com" class="signup__email-form" onkeydown="validation()">
                 <button type="submit">Get Started For Free</button>
+                <span id="error-text"></span>
             </form>
         </div>
     </section>
@@ -249,6 +250,9 @@
             Coded by <a href="https://github.com/J-Rayln">Michael Morales</a>.
         </p>
     </footer>
+
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>

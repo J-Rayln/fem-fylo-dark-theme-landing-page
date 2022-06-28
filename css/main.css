@@ -321,6 +321,15 @@ button:hover {
   }
 }
 
+#error-text {
+  display: block;
+  color: hsl(0deg, 100%, 63%);
+  font-weight: 300;
+  padding-left: 2.5rem;
+  padding-top: 1rem;
+  text-align: left;
+}
+
 /* footer */
 .footer {
   background-color: hsl(216deg, 53%, 9%);
